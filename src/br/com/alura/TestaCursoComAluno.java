@@ -32,6 +32,20 @@ public class TestaCursoComAluno {
             System.out.println(aluno);
         });
         
+        
+        System.out.println("A aluno a1 está matriculado?");
+        System.out.println(javaColecoes.estaMatriculado(a1));
+        
+        Aluno turini = new Aluno("Rodrigo Turini", "34672");
+        System.out.println("A aluno turini está matriculado?");
+        System.out.println(javaColecoes.estaMatriculado(turini));
+        
+        System.out.println("a1==turini?");
+        System.out.println(a1.equals(turini));
+        
+        System.out.println("Comparando os hashCodes");
+        System.out.println(a1.hashCode() == turini.hashCode());
+        
     }
     
 }
