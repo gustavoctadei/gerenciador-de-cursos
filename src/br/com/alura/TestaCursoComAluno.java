@@ -5,6 +5,9 @@
  */
 package br.com.alura;
 
+import java.util.Iterator;
+import java.util.Set;
+
 /**
  *
  * @author Gustavo
@@ -32,6 +35,15 @@ public class TestaCursoComAluno {
             System.out.println(aluno);
         });
         
+        System.out.println("Todos os alunos matriculados");
+        
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        while(iterador.hasNext()){
+            Aluno proximo = iterador.next();
+            System.out.println(proximo);
+        }
+        
         
         System.out.println("A aluno a1 está matriculado?");
         System.out.println(javaColecoes.estaMatriculado(a1));
@@ -45,6 +57,8 @@ public class TestaCursoComAluno {
         
         System.out.println("Comparando os hashCodes");
         System.out.println(a1.hashCode() == turini.hashCode());
+        
+        
         
     }
     
